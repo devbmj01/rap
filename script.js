@@ -91,7 +91,7 @@ async function buy(amount){
         amount = BigInt(amount)
         let cost = amount * 4000000000n
         console.log("cost", cost)
-        console.log("amount", amounts)
+        console.log("amount", amount)
         amount = toString(amount)
         cost = toString(cost)
         try {
