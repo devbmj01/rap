@@ -99,7 +99,7 @@ async function buy(amount){
             address: "0xc720bB26E90E7f58366CFe531cF9bCdDc82AD1A2",
             abi: ABI,
             functionName:'buyTokens',
-            args: [cost,
+            args: [
                 amount
                 ],
           })
