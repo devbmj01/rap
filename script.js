@@ -68,7 +68,7 @@ $(".connect").click(async function () {
 })
 
 $(".proceed").click(async function () {
-    let amount = document.getElementById("myText").value
+    let amount = document.getElementById("amount").value
     let account = getAccount(); 
     console.log(account)
     if(!account.address){
