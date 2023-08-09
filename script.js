@@ -12,7 +12,7 @@ import {
     WagmiCoreConnectors,
   } from "https://unpkg.com/@web3modal/ethereum@2.6.2";
 
-  import { parseEther } from "https://esm.sh/v126/viem@1.2.15/es2022/viem.bundle.mjs";
+  import { parseEther, parseUnits, formatUnits, toHex } from "https://esm.sh/v126/viem@1.2.15/es2022/viem.bundle.mjs";
   
   import { Web3Modal } from "https://unpkg.com/@web3modal/html@2.6.2";
 
@@ -53,8 +53,7 @@ import {
     ethereumClient
   );
 
-const ABI = [{"inputs":[{"internalType":"contract RapToken","name":"_tokenContract","type":"address"},{"internalType":"uint256","name":"_tokenPrice","type":"uint256"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"_buyer","type":"address"},{"indexed":false,"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"Sell","type":"event"},{"inputs":[],"name":"admin","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_numberOfTokens","type":"uint256"}],"name":"buyTokens","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"endSale","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"tokenContract","outputs":[{"internalType":"contract RapToken","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"tokenPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"tokensSold","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
-
+const ABI = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"setter","type":"address"},{"indexed":false,"internalType":"uint256","name":"price","type":"uint256"}],"name":"PriceForOneTokenChanged","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"setter","type":"address"},{"indexed":false,"internalType":"address","name":"token","type":"address"}],"name":"TokenAddressSet","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"buyer","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"TokenBought","type":"event"},{"inputs":[],"name":"Token","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"buy","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"claimProfits","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"claimTokensNotSold","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address[]","name":"_contracts","type":"address[]"}],"name":"connectToOtherContracts","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"exchangeRate","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"priceForOneToken","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"price","type":"uint256"}],"name":"updatePriceForOneToken","outputs":[],"stateMutability":"nonpayable","type":"function"}]
 $(".connect").click(async function () {
     console.log("1")
     try {
@@ -88,20 +87,20 @@ $(".proceed").click(async function () {
 })
 
 async function buy(amount){
-        amount = BigInt(amount)
-        let cost = amount * 4000000000n
-        console.log("cost", cost)
+  console.log("Initial amount ", amount)
+  amount = parseUnits(amount, 18) 
         console.log("amount", amount)
-        amount = toString(amount)
-        cost = toString(cost)
+        // amount = formatUnits(amount, 9)
+        // console.log("amount 2  ", amount)
+
+  amount = amount.toString()
+
         try {
         let { hash } = await writeContract({
-            address: "0xc720bB26E90E7f58366CFe531cF9bCdDc82AD1A2",
+            address: "0x10182F7B3440c5F9da90f90c03d6faF6038214e1",
             abi: ABI,
-            functionName:'buyTokens',
-            args: [
-                amount
-                ],
+            functionName:'buy',
+            value: amount
           })
           console.log(hash)
         }
@@ -109,4 +108,5 @@ async function buy(amount){
             console.log(`Error: ${error}`)
         }
     };
-  
+
+    

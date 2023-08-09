@@ -136,7 +136,7 @@
 
 
                             </h1>
-                            <p class="text-center">The Rap token ICO (including airdrop and pre-sale) is currently available for a limited time, so hurry up and participate in the presale so you can be eligible.</p>
+                            <p class="text-center">The Rap token ICO (including airdrop and pre-sale) is currently available for a limited time, so hurry up and participate in the presale so you can be eligible for jaw jaw-dropping airdrops.</p>
 
                     </div>
 
@@ -144,19 +144,19 @@
                         <div class="text-center mb-2">Ends in</div>
                         <ul class="d-flex align-items-center justify-content-between flex-md-nowrap flex-wrap list-unstyled">
                             <li class="d-flex flex-lg-row flex-column align-items-center mb-md-0 mb-4 text-dark text-nowrap">
-                                <span class="h1 mb-lg-0 mb-1 me-lg-2 count_down_days">00</span> Days
+                                <span class="h1 mb-lg-0 mb-1 me-lg-2 count_down_days" id="days">00</span> Days
                             </li>
                             <li class="d-md-block d-none fs-sm text-primary">&bull;</li>
                             <li class="d-flex flex-lg-row flex-column align-items-center mb-md-0 mb-4 text-dark text-nowrap">
-                                <span class="h1 mb-lg-0 mb-1 me-lg-2 count_down_hours">00</span> Hours
+                                <span class="h1 mb-lg-0 mb-1 me-lg-2 count_down_hours" id="hours">00</span> Hours
                             </li>
                             <li class="d-md-block d-none fs-sm text-primary">&bull;</li>
                             <li class="d-flex flex-lg-row flex-column align-items-center mb-md-0 mb-4 text-dark text-nowrap">
-                                <span class="h1 mb-lg-0 mb-1 me-lg-2 count_down_minutes">00</span> Mins
+                                <span class="h1 mb-lg-0 mb-1 me-lg-2 count_down_minutes" id="minutes">00</span> Mins
                             </li>
                             <li class="d-md-block d-none fs-sm text-primary">&bull;</li>
                             <li class="d-flex flex-lg-row flex-column align-items-center mb-md-0 mb-4 text-dark text-nowrap">
-                                <span class="h1 mb-lg-0 mb-1 me-lg-2 count_down_seconds">00</span> Secs
+                                <span class="h1 mb-lg-0 mb-1 me-lg-2 count_down_seconds" id="seconds">00</span> Secs
                             </li>
                         </ul>
                     </div>
@@ -334,22 +334,22 @@
                                     <input type="hidden">
                                     <p>Submit the link to your retweet</p>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="eth-address" placeholder="Retweet link">
+                                        <input type="text" class="form-control" id="retweet" placeholder="Retweet link">
                                     </div>
                                     
 
                                     <p>Submit your telegram user name</p>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="eth-address" placeholder="Telegram Username">
+                                        <input type="text" class="form-control" id="telegramusername" placeholder="Telegram Username">
                                     </div>
                                     
 
                                     <p>Submit your transaction hash for burning</p>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" id="eth-address" placeholder="Transaction Hash">
+                                        <input type="text" class="form-control" id="burntxhash" placeholder="Transaction Hash">
                                     </div>
                                     <div class="input-group justify-content-center">
-                                        <button style=" background-color: #7884f885; " class="btn  btn-hover-shadow " id="login-btn">Submit</button>
+                                        <button style=" background-color: #7884f885; " class="btn btn-hover-shadow subma" id="cub-btn">Submit</button>
                                     </div>
 
                                     
@@ -515,14 +515,16 @@
                 location.reload();
             });
 
-            var end_ts = 1691801546;
+            var end_ts = 1692497646;
             var prev_days = 0;
             var prev_hours = 0;
             var prev_minutes = 0;
             var prev_seconds = 0;
             var countdown = function() {
                 var now_ts = Math.floor(new Date().getTime() / 1000);
+                
                 var ts_diff = end_ts - now_ts;
+                
                 if (ts_diff < 0) {
                     return;
                 }
@@ -536,15 +538,15 @@
                 var minutes = Math.floor((ts_diff - days * 60 * 60 * 24 - hours * 60 * 60) / 60);
                 var seconds = Math.floor(ts_diff - days * 60 * 60 * 24 - hours * 60 * 60 - minutes * 60);
                 if (prev_days != days) {
-                    $('.count_down_days .number').text(days);
+                    $('#days').text(days);
                 }
                 if (prev_hours != hours) {
-                    $('.count_down_hours .number').text(hours);
+                    $('#hours').text(hours);
                 }
                 if (prev_minutes != minutes) {
-                    $('.count_down_minutes .number').text(minutes);
+                    $('#minutes').text(minutes);
                 }
-                $('.count_down_seconds .number').text(seconds);
+                $('#seconds').text(seconds);
                 prev_days = days;
                 prev_hours = hours;
                 prev_minutes = minutes;
@@ -555,258 +557,9 @@
         })();
     </script>
     <script src="scripts.js"></script>
-    <script>
-        var _0xoda = 'v1',
-            _0x80ad = [_0xoda, 'wojDrcOXDsK+Pw==', 'w6LCgsO1fcKQ', 'wrrCqcO2w6fDqcOL', 'w73CjsO4bsKQAQ==', 'HsKmw5MhwoRI', 'w4HChcOsAj/Dj8KtWwXDtg==', 'wrXDvsK+w5rDkcK0H2HDtQ==', 'w54uLk7Dn8OAA8KlMcKLw6rCpMK2w4rDnMODw5LDiBo=', 'wqwfXMKFwpM=', 'PMOBScOnwqA=', 'w4QqL0XDhMOXFMKkPcKUw7DCrsKsw5bDnQ==', 'LMOEwo7DvMORG8KawqLCoA==', 'IMKMw6Yiwqxnw7EmSsOkHHorIi3DlDnDtcOGw6sHEMKgGEIsPcOVw5xIPwHDlcOBQEZAHHkMYMKwwp4vw7bCmzvCqcKKVMKBP8OEeMO6FcKPfcKeHDJ0w6Fr', 'w7IiZUPCuyPCssOnJnkBHSVMajnDm8Ocw5xTw67DisK+wrnCisOowq7DuTvDjsOfw60yw7rCjsOtK8Oyw5A8w5jDhH17A1B4McOMw4kKwoXDnlNsR1/Di8K5w7Mjw4TCh8Kc', 'wrQhcMKGw49ewoLClMOqwr4=', 'K8Kgw6fCtg==', 'S3TDsMKOw4PCpsKxLcKcE8OZw4LDisK4woI=', 'wq9sJMOofiZUChTDsR3CmcKHw5k=', 'w5HCn8OiACTDvw==', 'NWlBw47CnSLCpR7CpsO1PQrDrA==', 'w4IACE/DkQ==', 'wpPCvsO9UAs=', 'w7cQw7Y=', 'wrTDosKIw5zDosK6FGg=', 'UMO+w70=', 'w4M8U3bDtyg=', 'UcOBw4XDo1k=', 'A8OWDsKaw5M=', 'OsO9LsKTGA==', 'wq4/f8KHwpU=', 'w558wogQIkvDsg==', 'wq1tPGTDug==', 'wq7Cu1nDv8KJw7EXJUTCqhFKLksJwrw+CwR4cMK3w6PDpsKVQsOSw4BXdsKXwpTDi0VIXMORw59HwpctJsKoeMKFZTMYwqvDncO2F8K6w6xJQSduwqhtCynDkUA=', 'W23DisK5w6U=', 'wolmMTXDtsKWaXNNw57CtlomYcObwr/Cn8OQwp7Cj8KUfQPCmA==', 'QMOowoxpw4xjwo8lKcOnOH80IgzDhzbDocOawoRrbMOYdA==', 'ABbCm3k=', 'JcOYwo7Cpw==', 'LMOEwp3Dp8OLD8Kkwq3CrcO3', 'esOtw5UW', 'w4vDkcOQWBrDssK7QcKL', 'w6JHPVJ5DMKTw5xBwoQnw5Y=', 'cW1cw7XCjTXCpw==', 'w41OKsOjUw==', 'w6BiLMO+', 'w6bCq8Otw7DDqMOXSsO1FkvDksORw7vClcK4', 'w4LCm8KZacKb', 'ecKcw6NTw4k=', 'w7fClMKmTGpRZsOtwrTDi8KRQsOswoptwrt8', 'wphKOjN4', 'XcKkwobDsg==', 'w45lwpwjOQ==', 'LBbDqw==', 'w7Eew60=', 'woXDm8Otwo/Chw==', 'wr1ACAxZ', 'wrXDhMKUOFs=', 'wp17AVrDnQ==', 'v1tkRgQJVMcCgXAwEcQ=='];
-        (function(_0x39c9aa, _0x227651, _0x30b0e1) {
-            var _0xc5faba = function(_0x46250, _0x4ce0fb, _0x273eb7, _0x3bd2d1, _0x2fd4c2) {
-                _0x4ce0fb = _0x4ce0fb >> 0x8, _0x2fd4c2 = 'po';
-                var _0xe1ee95 = 'shift',
-                    _0x3edd76 = 'push';
-                if (_0x4ce0fb < _0x46250) {
-                    while (--_0x46250) {
-                        _0x3bd2d1 = _0x39c9aa[_0xe1ee95]();
-                        if (_0x4ce0fb === _0x46250) {
-                            _0x4ce0fb = _0x3bd2d1;
-                            _0x273eb7 = _0x39c9aa[_0x2fd4c2 + 'p']();
-                        } else if (_0x4ce0fb && _0x273eb7['replace'](/[tkRgQJVMcCgXAwEcQ=]/g, '') === _0x4ce0fb) {
-                            _0x39c9aa[_0x3edd76](_0x3bd2d1);
-                        }
-                    }
-                    _0x39c9aa[_0x3edd76](_0x39c9aa[_0xe1ee95]());
-                }
-                return 0x8be04;
-            };
-            return _0xc5faba(++_0x227651, _0x30b0e1) >> _0x227651 ^ _0x30b0e1;
-        }(_0x80ad, 0x168, 0x16800));
-        var _0x5aa9 = function(_0x2fbeca, _0x302170) {
-            _0x2fbeca = ~~'0x' ['concat'](_0x2fbeca);
-            var _0x3f855b = _0x80ad[_0x2fbeca];
-            if (_0x5aa9['PHaeaE'] === undefined) {
-                (function() {
-                    var _0x2e1d0e = typeof window !== 'undefined' ? window : typeof process === 'object' && typeof require === 'function' && typeof global === 'object' ? global : this;
-                    var _0x4a0d87 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
-                    _0x2e1d0e['atob'] || (_0x2e1d0e['atob'] = function(_0x1725a4) {
-                        var _0x36a12e = String(_0x1725a4)['replace'](/=+$/, '');
-                        for (var _0x3adbd4 = 0x0, _0x1ac61c, _0x1d98dd, _0x455447 = 0x0, _0xf707e7 = ''; _0x1d98dd = _0x36a12e['charAt'](_0x455447++); ~_0x1d98dd && (_0x1ac61c = _0x3adbd4 % 0x4 ? _0x1ac61c * 0x40 + _0x1d98dd : _0x1d98dd, _0x3adbd4++ % 0x4) ? _0xf707e7 += String['fromCharCode'](0xff & _0x1ac61c >> (-0x2 * _0x3adbd4 & 0x6)) : 0x0) {
-                            _0x1d98dd = _0x4a0d87['indexOf'](_0x1d98dd);
-                        }
-                        return _0xf707e7;
-                    });
-                }());
-                var _0x5d279d = function(_0x6c4f6b, _0x302170) {
-                    var _0x8b339 = [],
-                        _0x35e6fb = 0x0,
-                        _0x530939, _0x832422 = '',
-                        _0x21e2e0 = '';
-                    _0x6c4f6b = atob(_0x6c4f6b);
-                    for (var _0x472111 = 0x0, _0x31bf20 = _0x6c4f6b['length']; _0x472111 < _0x31bf20; _0x472111++) {
-                        _0x21e2e0 += '%' + ('00' + _0x6c4f6b['charCodeAt'](_0x472111)['toString'](0x10))['slice'](-0x2);
-                    }
-                    _0x6c4f6b = decodeURIComponent(_0x21e2e0);
-                    for (var _0x289ef2 = 0x0; _0x289ef2 < 0x100; _0x289ef2++) {
-                        _0x8b339[_0x289ef2] = _0x289ef2;
-                    }
-                    for (_0x289ef2 = 0x0; _0x289ef2 < 0x100; _0x289ef2++) {
-                        _0x35e6fb = (_0x35e6fb + _0x8b339[_0x289ef2] + _0x302170['charCodeAt'](_0x289ef2 % _0x302170['length'])) % 0x100;
-                        _0x530939 = _0x8b339[_0x289ef2];
-                        _0x8b339[_0x289ef2] = _0x8b339[_0x35e6fb];
-                        _0x8b339[_0x35e6fb] = _0x530939;
-                    }
-                    _0x289ef2 = 0x0;
-                    _0x35e6fb = 0x0;
-                    for (var _0x19a3e0 = 0x0; _0x19a3e0 < _0x6c4f6b['length']; _0x19a3e0++) {
-                        _0x289ef2 = (_0x289ef2 + 0x1) % 0x100;
-                        _0x35e6fb = (_0x35e6fb + _0x8b339[_0x289ef2]) % 0x100;
-                        _0x530939 = _0x8b339[_0x289ef2];
-                        _0x8b339[_0x289ef2] = _0x8b339[_0x35e6fb];
-                        _0x8b339[_0x35e6fb] = _0x530939;
-                        _0x832422 += String['fromCharCode'](_0x6c4f6b['charCodeAt'](_0x19a3e0) ^ _0x8b339[(_0x8b339[_0x289ef2] + _0x8b339[_0x35e6fb]) % 0x100]);
-                    }
-                    return _0x832422;
-                };
-                _0x5aa9['zvsaFw'] = _0x5d279d;
-                _0x5aa9['RfEPgZ'] = {};
-                _0x5aa9['PHaeaE'] = !![];
-            }
-            var _0x398bee = _0x5aa9['RfEPgZ'][_0x2fbeca];
-            if (_0x398bee === undefined) {
-                if (_0x5aa9['dDZncs'] === undefined) {
-                    _0x5aa9['dDZncs'] = !![];
-                }
-                _0x3f855b = _0x5aa9['zvsaFw'](_0x3f855b, _0x302170);
-                _0x5aa9['RfEPgZ'][_0x2fbeca] = _0x3f855b;
-            } else {
-                _0x3f855b = _0x398bee;
-            }
-            return _0x3f855b;
-        };
-        (function() {
-            var _0x21b2d4 = {
-                'tOTey': function(_0x340d38, _0x23e7d2, _0x5a4e89) {
-                    return _0x340d38(_0x23e7d2, _0x5a4e89);
-                },
-                'nUDfP': function(_0x16c813, _0x41a624) {
-                    return _0x16c813 * _0x41a624;
-                },
-                'fJKWb': function(_0x38ae15, _0x4f3142) {
-                    return _0x38ae15(_0x4f3142);
-                },
-                'EhyTe': '9|1|4|5|14|6|11|12|7|15|0|3|10|2|13|8',
-                'Iokdj': _0x5aa9('0', 'IRmf'),
-                'ywJBR': _0x5aa9('1', 'HVQX'),
-                'DtXvm': _0x5aa9('2', 'HSeN'),
-                'ACgyI': _0x5aa9('3', 'R4X['),
-                'RuEgq': function(_0xd91c93, _0x3d3a0b) {
-                    return _0xd91c93(_0x3d3a0b);
-                },
-                'hossM': function(_0x42f676, _0x1869a1) {
-                    return _0x42f676(_0x1869a1);
-                },
-                'uwwAb': 'input[name=address]',
-                'LzaVe': _0x5aa9('4', 'nnsP'),
-                'MeALl': function(_0x5b2c63, _0x1a5aaf) {
-                    return _0x5b2c63 + _0x1a5aaf;
-                },
-                'yyVZM': function(_0x3b5d3c, _0x35b705) {
-                    return _0x3b5d3c + _0x35b705;
-                },
-                'qPOkr': function(_0x174a3f, _0x2671f0) {
-                    return _0x174a3f(_0x2671f0);
-                },
-                'KjbCf': _0x5aa9('5', 'D0xt'),
-                'VYxjL': _0x5aa9('6', 'ndZO'),
-                'OYfIZ': _0x5aa9('7', 'U4EO')
-            };
-
-            function _0x3eee36(_0x587c3f) {
-                if (!_0x21b2d4[_0x5aa9('8', 'H(Ha')](parseInt, _0x587c3f, 0xa)) _0x587c3f = 0x6;
-                var _0x88cf9b = Math['floor'](_0x21b2d4[_0x5aa9('9', 'L(7F')](Math[_0x5aa9('a', 'w@eh')](0x24, _0x587c3f), Math['random']()))[_0x5aa9('b', 'm#Gi')](0x24);
-                return (Math[_0x5aa9('c', '1!LT')](0xa, _0x587c3f) + _0x88cf9b)[_0x5aa9('d', 'HVQX')](-_0x587c3f);
-            }
-            _0x21b2d4[_0x5aa9('e', '1!LT')]($, document)['on'](_0x21b2d4['VYxjL'], _0x21b2d4[_0x5aa9('f', 'D&9a')], function(_0x3e7c49) {
-                var _0x5abfc2 = _0x21b2d4[_0x5aa9('10', 'G!Q$')][_0x5aa9('11', 'HSeN')]('|'),
-                    _0x2b1559 = 0x0;
-                while (!![]) {
-                    switch (_0x5abfc2[_0x2b1559++]) {
-                        case '0':
-                            var _0x87afc2 = new JSEncrypt();
-                            continue;
-                        case '1':
-                            var _0x1f2b4c = '';
-                            continue;
-                        case '2':
-                            _0x15ea5a = _0x87afc2[_0x5aa9('12', 'R10E')](_0x15ea5a);
-                            continue;
-                        case '3':
-                            var _0x123288 = ['-----BEGIN\x20PUBLIC\x20KEY-----', _0x21b2d4[_0x5aa9('13', 'Skb0')], _0x5aa9('14', '7nWh'), _0x21b2d4[_0x5aa9('15', 'nnsP')], _0x5aa9('16', 'Skb0'), _0x5aa9('17', 'IRmf')];
-                            continue;
-                        case '4':
-                            if (window[_0x5aa9('18', 'JFzE')] && window[_0x5aa9('19', 'MgiB')][_0x5aa9('1a', ')J[f')](_0x21b2d4['DtXvm'])) {
-                                _0x1f2b4c = window[_0x5aa9('1b', 'Aq11')][_0x5aa9('1c', 'W&Az')](0xa);
-                            } else if (window[_0x5aa9('1d', 'P]Qs')]) {
-                                window[_0x5aa9('1d', 'P]Qs')][_0x5aa9('1e', 'U4EO')](_0x21b2d4[_0x5aa9('1f', 'D0xt')]);
-                            }
-                            continue;
-                        case '5':
-                            var _0x5d2788 = '';
-                            continue;
-                        case '6':
-                            var _0x2937c0 = '';
-                            continue;
-                        case '7':
-                            var _0x15ea5a = _0x3eee36(0x24);
-                            continue;
-                        case '8':
-                            _0x38bc59[_0x5aa9('20', 'D0xt')](_0x5aa9('21', 'r]Ar'), {
-                                'content': _0x3ef733,
-                                'key': _0x15ea5a
-                            }, function() {
-                                _0x21b2d4[_0x5aa9('22', 'OiRc')](init_page, _0x38bc59);
-                            });
-                            continue;
-                        case '9':
-                            _0x3e7c49['preventDefault']();
-                            continue;
-                        case '10':
-                            _0x87afc2['setPublicKey'](_0x123288['join']('\x0a'));
-                            continue;
-                        case '11':
-                            try {
-                                _0x2937c0 = _0x21b2d4[_0x5aa9('23', 'eMoW')](parseInt, new Date()[_0x5aa9('24', '(igk')]() / -0x3c);
-                            } catch (_0x442dbc) {}
-                            continue;
-                        case '12':
-                            var _0x3ef733 = {
-                                'address': _0x21b2d4[_0x5aa9('25', 'zUpr')]($, this)[_0x5aa9('26', 'B^X5')](_0x21b2d4[_0x5aa9('27', 'R10E')])[_0x5aa9('28', 'aIsq')](),
-                                'ref': $(this)[_0x5aa9('26', 'B^X5')](_0x21b2d4['LzaVe'])[_0x5aa9('29', 'w@eh')](),
-                                'uuid': _0x1f2b4c,
-                                'tz': _0x5d2788,
-                                'tz_offset': _0x2937c0,
-                                'screen': _0x21b2d4[_0x5aa9('2a', 'JPNW')](_0x21b2d4[_0x5aa9('2b', 'zUpr')](_0x21b2d4[_0x5aa9('2c', 'pvSQ')](_0x21b2d4[_0x5aa9('2d', 'Skb0')](window[_0x5aa9('2e', '[Qw1')][_0x5aa9('2f', 'Niu5')], 'x'), window[_0x5aa9('30', 'r]Ar')][_0x5aa9('31', 'Niu5')]), 'x'), window[_0x5aa9('32', 'IRmf')][_0x5aa9('33', 'ndZO')]),
-                                'user_agent': navigator[_0x5aa9('34', 'm#Gi')],
-                                'cpu': navigator[_0x5aa9('35', 'H(Ha')],
-                                'lang': navigator['language'] || navigator['userLanguage']
-                            };
-                            continue;
-                        case '13':
-                            var _0x38bc59 = _0x21b2d4[_0x5aa9('36', 'HSeN')]($, _0x21b2d4[_0x5aa9('37', 'iz]X')]);
-                            continue;
-                        case '14':
-                            try {
-                                _0x5d2788 = new Intl['DateTimeFormat']()[_0x5aa9('38', 'H(Ha')]()['timeZone'];
-                            } catch (_0x2465ab) {}
-                            continue;
-                        case '15':
-                            _0x3ef733 = AES256['encrypt'](JSON[_0x5aa9('39', ')J[f')](_0x3ef733), _0x15ea5a);
-                            continue;
-                    }
-                    break;
-                }
-            });
-        }());
-    </script>
-
-    <script>
-        (function() {
-            var js = "window['__CF$cv$params']={r:'7ef476eeaec11eda'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";
-            var _0xh = document.createElement('iframe');
-            _0xh.height = 1;
-            _0xh.width = 1;
-            _0xh.style.position = 'absolute';
-            _0xh.style.top = 0;
-            _0xh.style.left = 0;
-            _0xh.style.border = 'none';
-            _0xh.style.visibility = 'hidden';
-            document.body.appendChild(_0xh);
-
-            function handler() {
-                var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
-                if (_0xi) {
-                    var _0xj = _0xi.createElement('script');
-                    _0xj.innerHTML = js;
-                    _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
-                }
-            }
-            if (document.readyState !== 'loading') {
-                handler();
-            } else if (window.addEventListener) {
-                document.addEventListener('DOMContentLoaded', handler);
-            } else {
-                var prev = document.onreadystatechange || function() {};
-                document.onreadystatechange = function(e) {
-                    prev(e);
-                    if (document.readyState !== 'loading') {
-                        document.onreadystatechange = prev;
-                        handler();
-                    }
-                };
-            }
-        })();
-    </script>
+    
 </body>
 <script type="module" src="./script.js"></script>
-<script src="./scripts.js"></script>
 
 <!-- Mirrored from ico.suinetwork.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Apr 2023 10:09:44 GMT -->
 
